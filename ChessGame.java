@@ -26,6 +26,31 @@ public class ChessGame {
         this.blackRating = blackRating;
     }
 
+    public ChessGame(ChessGame other) {
+        this.gameId = other.gameId;
+        this.rated = other.rated;
+        this.turns = other.turns;
+        this.victoryStatus = other.victoryStatus;
+        this.winner = other.winner;
+        this.timeIncrement = other.timeIncrement;
+        this.whiteId = other.whiteId;
+        this.whiteRating = other.whiteRating;
+        this.blackId = other.blackId;
+        this.blackRating = other.blackRating;
+    }
+
+    public ChessGame() {
+        this.gameId = -1;
+        this.rated = false;
+        this.turns = -1;
+        this.victoryStatus = "None";
+        this.winner = "None";
+        this.timeIncrement = "None";
+        this.whiteId = "None";
+        this.whiteRating = -1;
+        this.blackId = "None";
+        this.blackRating = -1;
+    }
 
     public int getGameId() {
         return gameId;
